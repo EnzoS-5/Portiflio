@@ -28,12 +28,11 @@ body {
 
 .corpo {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
     align-items: center;     /* Centraliza verticalmente */
     position: relative;
     height: auto; /* evita tamanho fixo que quebra ao zoom */
-    padding: 20px; /* fixo em px */
-    gap: 20px; /* adiciona gap fixo entre elementos */
+    padding: 12px 20px; /* padding vertical menor para aproximar elementos */
+    gap: 8px; /* reduz o espaçamento entre imagem e texto */
     color: blue;
 }
 
@@ -41,8 +40,9 @@ body {
     width: min(60vw, 750px);
     max-width: 100%;
     height: auto;
-    padding-left: 0; /* remove offset absoluto que desloca ao zoom */
-    margin: 0 auto;
+    /* centraliza horizontalmente calculando o espaço restante à esquerda */
+    padding-left: calc((100vw - min(60vw, 750px)) / 2);
+    margin: 0;
 }
 
 .mensagem_da_imagem {
@@ -67,6 +67,7 @@ body {
         align-items: center;
         height: auto;
         padding: 12px;
+        gap: 8px; /* manter gap reduzido no mobile */
         color: blue;
         text-align: center;
     }
@@ -88,4 +89,26 @@ body {
 @media (max-width: 480px) {
     .titulo_barra h1 { font-size: 22px; }
     .img_2 { max-width: 320px; }
+}
+
+/* Desktop: restaurar altura fixa e espaçamento originais para voltar à posição correta */
+@media (min-width: 769px) {
+    .corpo {
+        /* voltar à altura fixa original para evitar grande espaço vertical */
+        height: 48px;
+        padding: 20px;      /* padding original */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;          /* gap original entre elementos no desktop */
+    }
+
+    .img_2 {
+        /* restaurar largura e offset originais */
+        width: 750px;
+        max-width: 100%;
+        height: auto;
+        padding-left: 550px;
+        margin: 0;
+    }
 }
