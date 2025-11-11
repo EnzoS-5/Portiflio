@@ -39,3 +39,14 @@ Problemas comuns
 Se quiser, eu posso:
 - Adicionar um package.json de conveniência na pasta raiz que chame os scripts do subprojeto (para poder rodar npm run dev na raiz).
 - Separar mais instruções ou criar scripts cross-platform.
+
+Observação importante sobre imagens e deploy
+- Coloque todas as imagens usadas pelo site em notes-frontend/public/imagens (ex.: Eu.jpeg, curriculo.png, TankVsTower.png, InsperAsk.png, GitHub.png, Gmail.jfif, LikedIN.png, Facebook.png).
+- Confirme que os arquivos estão committed no repositório antes de rodar o build (git add/commit/push).
+- O Vite copia automaticamente o conteúdo de public para dist no build; se os arquivos não estiverem em public no momento do build, eles não serão incluídos e o deploy exibirá 404.
+- Passos recomendados:
+  1. cd notes-frontend
+  2. git add public/imagens/* && git commit -m "add imagens"
+  3. npm install
+  4. npm run build
+  5. npm run deploy
