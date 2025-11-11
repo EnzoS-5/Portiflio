@@ -6,7 +6,7 @@ export default function App() {
 
   const Nav = () => (
     <nav className="top_nav">
-      <button className="nav_button" onClick={() => setRoute('home')}>Home</button>
+      <button className="nav_button" onClick={() => setRoute('home')}>Início</button>
       <button className="nav_button" onClick={() => setRoute('curriculo')}>Curriculo</button>
       <button className="nav_button" onClick={() => setRoute('projetos')}>Projetos</button>
       <button className="nav_button" onClick={() => setRoute('vida')}>Vida Pessoal</button>
