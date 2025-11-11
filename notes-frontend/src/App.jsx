@@ -54,7 +54,7 @@ export default function App() {
       <div className="projeto_1">
         <h2>Projeto Portifolio</h2>
         <h3>Descrição:</h3>
-        <p>Esse site foi um projeto inicialmente para a faculdade, porém após algum tempo atualizando ele decidi torna-lo um projeto pessoal para mostrar minhas habilidades e trabalhos realizados. Atualmente, o site é feito com html e css básico, para facilitar o deploy por meio do GitHub, porém tenho a intensão de atualiza-lo futuramente para usar React, quando houver necessidade ou tempo para fazer essa atualização.</p>
+        <p>Esse site foi um projeto inicialmente para a faculdade com apenas html e css, porém após algum tempo atualizando ele decidi torna-lo um projeto pessoal para mostrar minhas habilidades e trabalhos realizados. Atualmente, o site é feito com React.</p>
       </div>
 
       <div className="projeto_1">
