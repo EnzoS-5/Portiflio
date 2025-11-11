@@ -10,10 +10,11 @@ body {
 /* Página inicial */
 .container {
     display: flex;
-    align-items: flex-start;
+    /* alinhar verticalmente ao centro para que imagem e texto fiquem na mesma posição */
+    align-items: center; /* ALTERADO: antes era flex-start */
     justify-content: flex-start; /* evitar space-around que altera distância com zoom */
     gap: 20px; /* distância fixa entre image_container e text_container */
-    height: 100vh;
+    height: 105vh;
     width: 100%;
     box-sizing: border-box;
     padding: 20px; /* fixo em px */
@@ -38,6 +39,10 @@ body {
     color: white; /* Cor padrão do texto */
     margin: 0; /* Remove margens padrão */
     padding: 0; /* Remove padding padrão */
+    /* garantir que o conteúdo do bloco de texto fique verticalmente centralizado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .text_container h1 {
