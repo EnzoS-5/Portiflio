@@ -42,3 +42,7 @@ body {
     height: auto; /* Mantém a proporção da imagem */
     padding-left: 550px;
 }
+
+.mensagem_da_imagem {
+    text-align: center;
+}

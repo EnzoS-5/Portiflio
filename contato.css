@@ -28,10 +28,12 @@ body {
 
 
 .facebook {
-    color: azul; /* Cor do Facebook */
-    font-size: 24px; /* Tamanho do ícone */
-    margin-right: 10px; /* Espaço à direita do ícone */
-    padding-left: 10px;
+    display: flex; /* Ativa o Flexbox para o contêiner principal */
+    align-items: center; /* Centraliza verticalmente os itens filhos (imagem e texto) */
+    justify-content: flex-start; /* Alinha os itens ao início (canto esquerdo) do contêiner */
+    border: 1px solid #ccc; /* Apenas para visualização */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .facebook img {
@@ -41,23 +43,28 @@ body {
 
 
 .email {
-    color: azul; /* Cor do email */
-    font-size: 24px; /* Tamanho do ícone */
-    margin-right: 10px; /* Espaço à direita do ícone */
-    padding-left: 35px;
+    display: flex; /* Ativa o Flexbox para o contêiner principal */
+    align-items: center; /* Centraliza verticalmente os itens filhos (imagem e texto) */
+    justify-content: flex-start; /* Alinha os itens ao início (canto esquerdo) do contêiner */
+    border: 1px solid #ccc; /* Apenas para visualização */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .email img {
     width: 200px; /* Tamanho do ícone */
     height: 200px; /* Tamanho do ícone */
+    padding: 25px;
 }
 
 
 .linkedin {
-    color: azul; /* Cor do LinkedIn */
-    font-size: 24px; /* Tamanho do ícone */
-    margin-right: 10px; /* Espaço à direita do ícone */
-    padding-left: 10px;
+    display: flex; /* Ativa o Flexbox para o contêiner principal */
+    align-items: center; /* Centraliza verticalmente os itens filhos (imagem e texto) */
+    justify-content: flex-start; /* Alinha os itens ao início (canto esquerdo) do contêiner */
+    border: 1px solid #ccc; /* Apenas para visualização */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .linkedin img {
