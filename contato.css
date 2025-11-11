@@ -26,6 +26,22 @@ body {
     margin: 0;
 }
 
+.GitHub {
+    display: flex; /* Ativa o Flexbox para o contêiner principal */
+    align-items: center; /* Centraliza verticalmente os itens filhos (imagem e texto) */
+    justify-content: flex-start; /* Alinha os itens ao início (canto esquerdo) do contêiner */
+    border: 1px solid #ccc; /* Apenas para visualização */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px; /* fixo em px para manter distância interna estável */
+}
+
+.GitHub img {
+    width: clamp(120px, 15vw, 250px);
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+}
 
 .facebook {
     display: flex; /* Ativa o Flexbox para o contêiner principal */
@@ -95,7 +111,8 @@ body {
 
     .facebook,
     .email,
-    .linkedin {
+    .linkedin,
+    .GitHub {
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -105,7 +122,8 @@ body {
 
     .facebook img,
     .email img,
-    .linkedin img {
+    .linkedin img,
+    .GitHub img {
         width: 60%;
         max-width: 250px;
         height: auto;
