@@ -26,24 +26,7 @@ body {
     margin: 0;
 }
 
-.corpo {
-    display: flex;
-    align-items: center;     /* Centraliza verticalmente */
-    position: relative;
-    height: auto; /* evita tamanho fixo que quebra ao zoom */
-    padding: 12px 20px; /* padding vertical menor para aproximar elementos */
-    gap: 8px; /* reduz o espaçamento entre imagem e texto */
-    color: blue;
-}
 
-.img_2 {
-    width: min(60vw, 750px);
-    max-width: 100%;
-    height: auto;
-    /* centraliza horizontalmente calculando o espaço restante à esquerda */
-    padding-left: calc((100vw - min(60vw, 750px)) / 2);
-    margin: 0;
-}
 
 .mensagem_da_imagem {
     text-align: center;
