@@ -21,7 +21,7 @@ export default function App() {
     <main>
       <div className="container">
         <div className="image_container">
-          <img src={`${BASE}imagens/Eu.jpeg`} alt="Enzo S" />
+          <img src={`notes-frontend/public/imagens/Eu.jpeg`} alt="Enzo S" />
         </div>
 
         <div className="text_container">
@@ -43,7 +43,7 @@ export default function App() {
       <div className="corpo">
         <a href="https://docs.google.com/document/d/153amiYypiA00T9xonlCmQiVJLt0UrbHq/edit?usp=sharing&ouid=103963937999349777155&rtpof=true&sd=true" target="_blank" rel="noreferrer"> Meu Curriculo</a>
       </div>
-      <img className="img_2" src={`${BASE}imagens/curriculo.png`} alt="Curriculo" />
+      <img className="img_2" src={`notes-frontend/public/imagens/curriculo.png`} alt="Curriculo" />
       <div className="mensagem_da_imagem"><li>Imagem de: 11/11/2025</li></div>
     </div>
   )
@@ -61,7 +61,7 @@ export default function App() {
       </div>
 
       <div className="projeto_1">
-        <img className="img_3" src={`${BASE}imagens/TankVsTower.png`} alt="Projeto Tank Vs Towers" />
+        <img className="img_3" src={`notes-frontend/public/imagens/TankVsTower.png`} alt="Projeto Tank Vs Towers" />
         <h2>Projeto Tank Vs Towers</h2>
         <h3>Descrição:</h3>
         <p>O projeto Tank Vs Towers é um jogo desenvolvido em Python utilizando a biblioteca Pygame. Esse projeto foi realizado por mim e um colega no primeiro semestre de 2025. Outra parte do projeto foi o site que fizemos para apresentar o jogo e suas funcionalidades.</p>
@@ -96,7 +96,7 @@ export default function App() {
         <a href="#" onClick={(e)=>{e.preventDefault(); setRoute('home')}}><h1>Contato</h1></a>
       </div>
       <div className="GitHub">
-        <img src={`${BASE}imagens/GitHub.png`} alt="GitHub" className="github_icon" />
+        <img src={`notes-frontend/public/imagens/GitHub.png`} alt="GitHub" className="github_icon" />
         <a href="https://github.com/EnzoS-5" target="_blank" rel="noreferrer" className="bot_f">GitHub</a>
       </div>
       <div className="email">
@@ -104,11 +104,11 @@ export default function App() {
         <a href="mailto:ez.santoro@gmail.com">ez.santoro@gmail.com</a>
       </div>
       <div className="linkedin">
-        <img src={`${BASE}imagens/LikedIN.png`} alt="LinkedIn" className="linkedin_icon" />
+        <img src={`notes-frontend/public/imagens/LikedIN.png`} alt="LinkedIn" className="linkedin_icon" />
         <a href="https://www.linkedin.com/in/enzo-santoro-3623a4364" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
       <div className="facebook">
-        <img src={`${BASE}imagens/Facebook.png`} alt="Facebook" className="facebook_icon" />
+        <img src={`notes-frontend/public/imagens/Facebook.png`} alt="Facebook" className="facebook_icon" />
         <a href="https://www.facebook.com/profile.php?id=100012822668776" target="_blank" rel="noreferrer" className="bot_f">Facebook</a>
       </div>
     </div>
