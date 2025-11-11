@@ -21,7 +21,7 @@ export default function App() {
     <main>
       <div className="container">
         <div className="image_container">
-          <img src={`imagens/Eu.jpeg`} alt="Enzo S" />
+          <img src={`public/imagens/Eu.jpeg`} alt="Enzo S" />
         </div>
 
         <div className="text_container">
@@ -43,7 +43,7 @@ export default function App() {
       <div className="corpo">
         <a href="https://docs.google.com/document/d/153amiYypiA00T9xonlCmQiVJLt0UrbHq/edit?usp=sharing&ouid=103963937999349777155&rtpof=true&sd=true" target="_blank" rel="noreferrer"> Meu Curriculo</a>
       </div>
-      <img className="img_2" src={`imagens/curriculo.png`} alt="Curriculo" />
+      <img className="img_2" src={`public/imagens/curriculo.png`} alt="Curriculo" />
       <div className="mensagem_da_imagem"><li>Imagem de: 11/11/2025</li></div>
     </div>
   )
@@ -61,7 +61,7 @@ export default function App() {
       </div>
 
       <div className="projeto_1">
-        <img className="img_3" src={`imagens/TankVsTower.png`} alt="Projeto Tank Vs Towers" />
+        <img className="img_3" src={`public/imagens/TankVsTower.png`} alt="Projeto Tank Vs Towers" />
         <h2>Projeto Tank Vs Towers</h2>
         <h3>Descrição:</h3>
         <p>O projeto Tank Vs Towers é um jogo desenvolvido em Python utilizando a biblioteca Pygame. Esse projeto foi realizado por mim e um colega no primeiro semestre de 2025. Outra parte do projeto foi o site que fizemos para apresentar o jogo e suas funcionalidades.</p>
@@ -69,7 +69,7 @@ export default function App() {
       </div>
 
       <div className="projeto_1">
-        <img className="img_3" src={`imagens/InsperAsk.png`} alt="Projeto InsperAsk" />
+        <img className="img_3" src={`public/imagens/InsperAsk.png`} alt="Projeto InsperAsk" />
         <h2>Projeto InsperAsk</h2>
         <h3>Descrição:</h3>
         <p>O projeto InsperAsk foi feito pelo meu grupo (Fevereiro) para um trabalho de faculdade no meu segundo semestre, no qual desenvolvemos um projeto em React e MongoDB. Esse projeto teve como insiração o Bainly, porém adaptamos a ideia para encaixar com nossa faculdade, tanto que só é possivel entrar quem possui um email @insper.edu.br que é cedido aos alunos e professores do Insper.</p>
@@ -96,19 +96,19 @@ export default function App() {
         <a href="#" onClick={(e)=>{e.preventDefault(); setRoute('home')}}><h1>Contato</h1></a>
       </div>
       <div className="GitHub">
-        <img src={`imagens/GitHub.png`} alt="GitHub" className="github_icon" />
+        <img src={`public/imagens/GitHub.png`} alt="GitHub" className="github_icon" />
         <a href="https://github.com/EnzoS-5" target="_blank" rel="noreferrer" className="bot_f">GitHub</a>
       </div>
       <div className="email">
-        <img src={`imagens/Gmail.jfif`} alt="Email" className="email_icon" />
+        <img src={`public/imagens/Gmail.jfif`} alt="Email" className="email_icon" />
         <a href="mailto:ez.santoro@gmail.com">ez.santoro@gmail.com</a>
       </div>
       <div className="linkedin">
-        <img src={`imagens/LikedIN.png`} alt="LinkedIn" className="linkedin_icon" />
+        <img src={`public/imagens/LikedIN.png`} alt="LinkedIn" className="linkedin_icon" />
         <a href="https://www.linkedin.com/in/enzo-santoro-3623a4364" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
       <div className="facebook">
-        <img src={`imagens/Facebook.png`} alt="Facebook" className="facebook_icon" />
+        <img src={`public/imagens/Facebook.png`} alt="Facebook" className="facebook_icon" />
         <a href="https://www.facebook.com/profile.php?id=100012822668776" target="_blank" rel="noreferrer" className="bot_f">Facebook</a>
       </div>
     </div>
