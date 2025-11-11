@@ -52,6 +52,14 @@ body {
     text-align: left; /* Centraliza o texto */
 }
 
+.projeto_1 p {
+    width: 60%;           /* ocupa 60% da largura horizontal (desktop) */
+    max-width: 1000px;    /* limite opcional se desejar */
+    box-sizing: border-box;
+    margin: 0 auto;       /* centraliza a caixa dentro do .projeto_1 */
+    text-align: left;     /* mantém o alinhamento do texto */
+}
+
 .projeto a {
     text-decoration: none;
     color: blue;
@@ -77,6 +85,12 @@ body {
         font-size: clamp(18px, 6.5vw, 28px);
     }
 
+    .projeto_1 p {
+        width: 90%;       /* mais largo para telas médias */
+        margin: 0 auto;
+        padding: 0 8px;   /* evita que o texto encoste nas laterais */
+    }
+
     .projeto a {
         font-size: 16px;
     }
@@ -86,4 +100,9 @@ body {
     .titulo_barra h1 { font-size: 22px; }
     .projeto_1 h2 { font-size: 22px; }
     .projeto_1 img { max-width: 360px; }
+    .projeto_1 p {
+        width: 95%;       /* quase toda a largura em celulares */
+        margin: 0 auto;
+        padding: 0 8px;
+    }
 }
