@@ -10,13 +10,13 @@ body {
 /* Página inicial */
 .container {
     display: flex;
-    align-items: flex-start; /* Alinha o texto ao topo da imagem */
-    justify-content: space-around; /* Distribui espaço entre a imagem e o texto */
-    gap: 1px; /* Espaço entre a imagem e o texto */
-    height: 100vh; /* Ocupa toda a altura da tela */
-    width: 100%; /* Ocupa toda a largura da tela */
-    box-sizing: border-box; /* Inclui padding e bordas no tamanho total */
-    padding: 20px; /* Adiciona espaçamento interno */
+    align-items: flex-start;
+    justify-content: flex-start; /* evitar space-around que altera distância com zoom */
+    gap: 20px; /* distância fixa entre image_container e text_container */
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px; /* fixo em px */
 }
 
 .image_container {
@@ -27,8 +27,10 @@ body {
 }
 
 .image_container img {
-    width: 500px; /* Ajuste o valor para o tamanho desejado */
-    height: auto; /* Mantém a proporção da imagem */
+    /* escala proporcionalmente com a viewport, mantendo limite máximo */
+    width: min(40vw, 500px);
+    max-width: 100%;
+    height: auto;
 }
 
 .text_container {
@@ -39,12 +41,12 @@ body {
 }
 
 .text_container h1 {
+    font-size: clamp(24px, 4.5vw, 48px);
     margin-bottom: 20px; /* Espaço abaixo do h1 */
-    font-size: 48px; /* Aumenta o tamanho da fonte do h1 */
 }
 
 .ul_1 {
-    font-size: 24px; /* Aumenta o tamanho da fonte dos itens da lista */
+    font-size: clamp(16px, 2.4vw, 24px); /* Aumenta o tamanho da fonte dos itens da lista */
     line-height: 1.5; /* Aumenta o espaço entre as linhas */
 }
 
@@ -57,18 +59,18 @@ body {
     background-color: white; /* Fundo branco */
     color: black; /* Cor do texto */
     text-align: left;
-    padding: 10px 20px; /* Ajusta o espaçamento interno */
-    width: auto; /* Ajusta a largura automaticamente ao conteúdo */
-    max-width: 600px; /* Define um limite máximo para a largura */
+    padding: clamp(8px, 1.2vw, 20px); /* Ajusta o espaçamento interno */
+    width: min(85vw, 600px); /* Ajusta a largura automaticamente ao conteúdo */
+    max-width: 100%; /* Define um limite máximo para a largura */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    height: 80px; /* Altura fixa para o bloco */
+    height: auto; /* permite altura dinâmica */
     box-sizing: border-box; /* Inclui padding no tamanho total */
     position: absolute; /* Posiciona o bloco dentro da primeira página */
-    bottom: 0.5px; /* Posiciona o bloco 20px acima do final da página */
+    bottom: 10px; /* fixo em px para manter distância vertical constante */
     left: 50%; /* Centraliza horizontalmente */
     transform: translateX(-50%); /* Ajusta o posicionamento horizontal */
 }   
@@ -121,8 +123,8 @@ body {
     background-color: black; /* Fundo preto */
     color: white; /* Texto branco */
     border: none; /* Remove bordas */
-    padding: 20px 40px; /* Espaçamento interno */
-    margin: 0 50px; /* Espaçamento horizontal entre os botões */
+    padding: 20px 40px; /* fixo em px */
+    margin: 0 50px; /* fixo em px */
     font-size: 32px; /* Tamanho da fonte */
     cursor: pointer; /* Mostra o cursor de clique */
     border-radius: 5px; /* Bordas arredondadas */
@@ -132,4 +134,64 @@ body {
 .black_button:hover {
     background-color: green; /* Muda o fundo para verde */
     color: black; /* Muda o texto para preto */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 16px;
+        height: auto;
+    }
+
+    .image_container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    .image_container img {
+        width: 90%;
+        max-width: 480px;
+        height: auto;
+    }
+
+    .text_container {
+        width: 100%;
+        padding: 12px 8px;
+        text-align: center;
+    }
+
+    .text_container h1 {
+        font-size: clamp(20px, 6vw, 32px);
+        margin-bottom: 12px;
+    }
+
+    .ul_1 { font-size: 18px; }
+
+    .info_block {
+        position: static;
+        transform: none;
+        margin: 18px auto;
+        padding: 12px 16px;
+    }
+
+    .arrow_down { display: none; }
+
+    .button_page { height: auto; padding: 24px 12px; }
+
+    .black_button {
+        font-size: 20px;
+        padding: 14px 28px;
+        margin: 0 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text_container h1 { font-size: 24px; }
+    .ul_1 { font-size: 16px; }
+    .image_container img { max-width: 360px; width: 95%; }
+    .black_button { font-size: 18px; padding: 12px 20px; margin: 8px 6px; }
 }

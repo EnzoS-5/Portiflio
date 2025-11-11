@@ -13,7 +13,7 @@ body {
     justify-content: flex-start; /* Alinha à esquerda */
     align-items: center;         /* Centraliza verticalmente */
     box-sizing: border-box;
-    padding-left: 40px; /* Espaçamento da borda esquerda */
+    padding-left: 40px; /* fixo em px para manter distância estável */
 }
 
 .titulo_barra a {
@@ -22,7 +22,8 @@ body {
 
 .titulo_barra h1 {
     color: white;
-    font-size: 48px;
+    /* Mantém até 48px, encolhe proporcionalmente com a largura da janela */
+    font-size: clamp(22px, 3.5vw, 48px);
     margin: 0;
 }
 
@@ -32,19 +33,21 @@ body {
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center;     /* Centraliza verticalmente */
     box-sizing: border-box;
-    padding: 20px;
-    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px; /* fixo em px */
+    gap: 20px; /* fixo em px para manter distância entre itens */
 }
 
 .projeto_1 img {
-    height: 400px; /* Altura fixa */
-    width: auto; /* Largura fixa */
+    /* Remover altura fixa; escala com a viewport, mantendo proporção */
+    width: min(45vw, 420px);
+    max-width: 100%;
+    height: auto;
     object-fit: cover; /* Cobre o espaço mantendo a proporção */
 }
 
 .projeto_1 h2 {
     color: green;
-    font-size: 48px;
+    font-size: clamp(20px, 3.2vw, 48px);
     margin: 0;
     text-align: left; /* Centraliza o texto */
 }
@@ -57,4 +60,30 @@ body {
 
 .projeto a:hover {
     text-decoration: underline;
+}
+
+/* Responsive adjustments (ajustados para usar as novas regras e preservar posição ao dar zoom) */
+@media (max-width: 768px) {
+    .titulo_barra h1 {
+        font-size: clamp(18px, 5.5vw, 28px);
+    }
+
+    .projeto_1 img {
+        width: 90%;
+        max-width: 420px;
+    }
+
+    .projeto_1 h2 {
+        font-size: clamp(18px, 6.5vw, 28px);
+    }
+
+    .projeto a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo_barra h1 { font-size: 22px; }
+    .projeto_1 h2 { font-size: 22px; }
+    .projeto_1 img { max-width: 360px; }
 }

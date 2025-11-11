@@ -22,7 +22,7 @@ body {
 
 .titulo_barra h1 {
     color: white;
-    font-size: 48px;
+    font-size: clamp(22px, 3.5vw, 48px);
     margin: 0;
 }
 
@@ -31,18 +31,61 @@ body {
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center;     /* Centraliza verticalmente */
     position: relative;
-    height: 48px;
-    padding: 20px;
+    height: auto; /* evita tamanho fixo que quebra ao zoom */
+    padding: 20px; /* fixo em px */
+    gap: 20px; /* adiciona gap fixo entre elementos */
     color: blue;
 }
 
-
 .img_2 {
-    width: 750px; /* Ajuste o valor para o tamanho desejado */
-    height: auto; /* Mantém a proporção da imagem */
-    padding-left: 550px;
+    width: min(60vw, 750px);
+    max-width: 100%;
+    height: auto;
+    padding-left: 0; /* remove offset absoluto que desloca ao zoom */
+    margin: 0 auto;
 }
 
 .mensagem_da_imagem {
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .titulo_barra {
+        height: auto;
+        padding: 14px;
+        justify-content: center;
+        padding-left: 14px;
+    }
+
+    .titulo_barra h1 {
+        font-size: clamp(18px, 5.5vw, 28px);
+        text-align: center;
+    }
+
+    .corpo {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 12px;
+        color: blue;
+        text-align: center;
+    }
+
+    .img_2 {
+        width: 90%;
+        max-width: 750px;
+        padding-left: 0;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .mensagem_da_imagem {
+        text-align: center;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo_barra h1 { font-size: 22px; }
+    .img_2 { max-width: 320px; }
 }
