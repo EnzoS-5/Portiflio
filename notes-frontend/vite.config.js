@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // usar '/' em desenvolvimento e '/Portiflio/' em produção (para gh-pages)
-  base: process.env.NODE_ENV === 'production' ? '/Portiflio/' : '/'
+  base: import.meta.env.PROD ? '/Portiflio/' : '/'
 })
