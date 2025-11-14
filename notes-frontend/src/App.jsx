@@ -38,7 +38,7 @@ export default function App() {
   const Curriculo = () => (
     <div>
       <div className="titulo_barra">
-        <a href="#" onClick={(e)=>{e.preventDefault(); setRoute('home')}}><h1>Curriculo</h1></a>
+        <a href="#" onClick={(e) => { e.preventDefault(); setRoute('home') }}><h1>Curriculo</h1></a>
       </div>
       <div className="corpo">
         <a href="https://docs.google.com/document/d/153amiYypiA00T9xonlCmQiVJLt0UrbHq/edit?usp=sharing&ouid=103963937999349777155&rtpof=true&sd=true" target="_blank" rel="noreferrer"> Meu Curriculo</a>
@@ -51,7 +51,7 @@ export default function App() {
   const Projetos = () => (
     <div>
       <div className="titulo_barra">
-        <a href="#" onClick={(e)=>{e.preventDefault(); setRoute('home')}}><h1>Projetos</h1></a>
+        <a href="#" onClick={(e) => { e.preventDefault(); setRoute('home') }}><h1>Projetos</h1></a>
       </div>
 
       <div className="projeto_1">
@@ -81,7 +81,7 @@ export default function App() {
   const Vida = () => (
     <div>
       <div className="titulo_barra">
-        <a href="#" onClick={(e)=>{e.preventDefault(); setRoute('home')}}><h1>Vida Pessoal</h1></a>
+        <a href="#" onClick={(e) => { e.preventDefault(); setRoute('home') }}><h1>Vida Pessoal</h1></a>
       </div>
       <div className="mini_bio">
         <p>Meu nome é Enzo Santoro, tenho 19 anos e atualmente curso o segundo semestre de Ciência da Computação no INSPER. Desde pequeno, sempre fui apaixonado por tecnologia, o que me motivou a seguir essa área. Além disso, tenho grande interesse por música — estudei bateria por vários anos — e acredito que essa vivência me ajudou a desenvolver ritmo, disciplina e trabalho em equipe, especialmente por ter participado de bandas e projetos colaborativos. Também gosto de desafios que envolvem lógica e resolução de problemas, o que complementa minha formação e amplia minha visão para diferentes tipos de experiências.</p>
@@ -93,7 +93,7 @@ export default function App() {
   const Contato = () => (
     <div>
       <div className="titulo_barra">
-        <a href="#" onClick={(e)=>{e.preventDefault(); setRoute('home')}}><h1>Contato</h1></a>
+        <a href="#" onClick={(e) => { e.preventDefault(); setRoute('home') }}><h1>Contato</h1></a>
       </div>
       <div className="GitHub">
         <img src={`GitHub.png`} alt="GitHub" className="github_icon" />
