@@ -61,16 +61,16 @@ export default function App() {
       </div>
 
       <div className="projeto_1">
-        <img className="img_3" src={`TankVsTower.png`} alt="Projeto Tank Vs Towers" />
         <h2>Projeto Tank Vs Towers</h2>
+        <img className="img_3" src={`TankVsTower.png`} alt="Projeto Tank Vs Towers" />
         <h3>Descrição:</h3>
         <p>O projeto Tank Vs Towers é um jogo desenvolvido em Python utilizando a biblioteca Pygame. Esse projeto foi realizado por mim e um colega no primeiro semestre de 2025. Outra parte do projeto foi o site que fizemos para apresentar o jogo e suas funcionalidades.</p>
         <a href="https://insper-classroom.github.io/projeto-pygame-site-prateado-ruan-e-enzo/" target="_blank" rel="noreferrer">Link do projeto Tank Vs Towers</a>
       </div>
 
       <div className="projeto_1">
-        <img className="img_3" src={`InsperAsk.png`} alt="Projeto InsperAsk" />
         <h2>Projeto InsperAsk</h2>
+        <img className="img_3" src={`InsperAsk.png`} alt="Projeto InsperAsk" />
         <h3>Descrição:</h3>
         <p>O projeto InsperAsk foi feito pelo meu grupo (Fevereiro) para um trabalho de faculdade no meu segundo semestre, no qual desenvolvemos um projeto em React e MongoDB. Esse projeto teve como insiração o Bainly, porém adaptamos a ideia para encaixar com nossa faculdade, tanto que só é possivel entrar quem possui um email @insper.edu.br que é cedido aos alunos e professores do Insper.</p>
         <a href="http://54.221.82.163" target="_blank" rel="noreferrer">Link do projeto InsperAsk</a>
